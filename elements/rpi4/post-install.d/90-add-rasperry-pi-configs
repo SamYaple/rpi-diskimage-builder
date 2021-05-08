@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ${DIB_DEBUG_TRACE:-0} -gt 0 ]; then
+    set -x
+fi
+set -eu
+set -o pipefail
+
+for f in cmdline.txt config.txt; do
+    cp -av /tmp/in_target.d/${f} /boot/firmware/
+done
