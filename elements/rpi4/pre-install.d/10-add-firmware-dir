@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ${DIB_DEBUG_TRACE:-0} -gt 0 ]; then
+    set -x
+fi
+set -eu
+set -o pipefail
+
+# ubuntu installs all the raspberry pi firmware in /boot/firmware which is the
+# first partition and where the raspberry pi looks first when booting
+mkdir /boot/firmware

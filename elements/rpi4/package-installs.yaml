@@ -1,0 +1,7 @@
+linux-firmware-raspi2:
+linux-raspi:
+u-boot-rpi:
+u-boot-tools:
+flash-kernel:
+device-tree-compiler:
+libubootenv-tool:
