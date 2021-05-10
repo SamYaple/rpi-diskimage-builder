@@ -17,7 +17,6 @@ export DIB_CREATE_USERNAME=mgmt
 # $DIB_ADD_AUTHORIZED_SSH_KEY is added to /home/$DIB_CREATE_USERNAME/.ssh/authorized_keys
 export DIB_ADD_AUTHORIZED_SSH_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8/vEPvz4foBsFFi1i2mBrf8ZEpiYFtt7VjCLfwgO4R"
 
-export DIB_OPENSSH_SERVER_HARDENING=1
 export DIB_DEBIAN_COMPONENTS=main,universe,multiverse,restricted
 export DIB_RELEASE=hirsute
 export DIB_UBUNTU_KERNEL=linux-raspi

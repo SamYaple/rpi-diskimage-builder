@@ -44,9 +44,6 @@ usage can be found upstream and should supplement this readme.
     # (optional) $DIB_ADD_AUTHORIZED_SSH_KEY is added to /home/$DIB_CREATE_USERNAME/.ssh/authorized_keys
     export DIB_ADD_AUTHORIZED_SSH_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8/vEPvz4foBsFFi1i2mBrf8ZEpiYFtt7VjCLfwgO4R"
 
-    # (optional) Some configuration changes to help harden the sshd ciphers and options
-    export DIB_OPENSSH_SERVER_HARDENING=1
-
     # The RELEASE and DEBIAN_COMPONENTS can be adjusted as needed. Refer to upstream documentation
     export DIB_RELEASE=hirsute
     export DIB_DEBIAN_COMPONENTS=main,universe,multiverse,restricted
@@ -59,4 +56,4 @@ usage can be found upstream and should supplement this readme.
     export ELEMENTS_PATH="~/rpi-diskimage-builder/elements"
     
     # After the above envvars have been set, you can run disk-image-create as you normally would
-    disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4
+    disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4 openssh-server
