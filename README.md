@@ -32,7 +32,7 @@ Additional documentation for
 [diskimage-builder](https://docs.openstack.org/diskimage-builder/latest/user_guide/building_an_image.html)
 usage can be found upstream and should supplement this readme.
 
-# Building with the rpi4 element
+# Building with the rpi4-minimal element
 
     # (optional) if you want to use an apt-cacher-ng server or similiar, set this value. The
     # configuration this sets is only used during build and does not end up in the final image
@@ -50,4 +50,9 @@ usage can be found upstream and should supplement this readme.
     export ELEMENTS_PATH="~/rpi-diskimage-builder/elements"
     
     # After the above envvars have been set, you can run disk-image-create as you normally would
-    disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4
+    disk-image-create -t raw -o ~/rpi4.raw rpi4-minimal
+
+# Building with the rpi4 element
+
+While the `rpi4-minimal` element is generic, the `rpi4` element should be
+modified/copied by YOU to customize further.
