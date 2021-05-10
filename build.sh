@@ -30,4 +30,5 @@ if [[ ! -d "${VENV_DIR}" ]]; then
 fi
 
 source "${VENV_DIR}/bin/activate"
-disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4
+disk-image-create -t qcow2 -o ~/rpi4.qcow2 rpi4
+# qemu-img convert -f qcow2 -O raw ~/rpi4.qcow2 /dev/mmcblk1

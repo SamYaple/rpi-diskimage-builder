@@ -56,4 +56,4 @@ usage can be found upstream and should supplement this readme.
     export ELEMENTS_PATH="~/rpi-diskimage-builder/elements"
     
     # After the above envvars have been set, you can run disk-image-create as you normally would
-    disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4 openssh-server
+    disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4

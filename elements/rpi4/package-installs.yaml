@@ -1,11 +1,5 @@
-linux-firmware-raspi2:
-linux-raspi:
-u-boot-rpi:
-
-# the dpkg element sets no-install-recommends. These packages are recommended
-# from the u-boot-rpi package. They are required for generating all the device
-# overlays and setting up /boot/firmware properly
-u-boot-tools:
-flash-kernel:
-device-tree-compiler:
-libubootenv-tool:
+htop:
+iproute2:
+mosh:
+tmux:
+vim:
