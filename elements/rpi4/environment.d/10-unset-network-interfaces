@@ -1,2 +1,2 @@
-# This is handled by the package ubuntu-raspi-settings
+# Networking is handled by systemd-networkd
 export DIB_APT_MINIMAL_CREATE_INTERFACES=0
