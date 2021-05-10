@@ -12,5 +12,6 @@ if [[ -n "${DIB_CREATE_USERNAME}" ]]; then
     if [[ -n "${DIB_ADD_AUTHORIZED_SSH_KEY}" ]]; then
         mkdir -m700 "/home/${DIB_CREATE_USERNAME}/.ssh"
         echo "${DIB_ADD_AUTHORIZED_SSH_KEY}" > "/home/${DIB_CREATE_USERNAME}/.ssh/authorized_keys"
+        chown -R "${DIB_CREATE_USERNAME}:${DIB_CREATE_USERNAME}" "/home/${DIB_CREATE_USERNAME}/.ssh"
     fi
 fi

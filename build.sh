@@ -21,7 +21,7 @@ fi
 
 export http_proxy=http://192.168.0.254:3142
 export DIB_CREATE_USERNAME=mgmt
-export DIB_ADD_AUTHORIZED_SSH_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8/vEPvz4foBsFFi1i2mBrf8ZEpiYFtt7VjCLfwgO4R"
+export DIB_ADD_AUTHORIZED_SSH_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPfO7Sg7j9s1ZuhSCTEHSDgiDkgr/YlJFwJsLlwrZFPE"
 export DIB_DEBIAN_COMPONENTS=main,universe,multiverse,restricted
 export DIB_RELEASE=hirsute
 export DIB_UBUNTU_KERNEL=linux-raspi
