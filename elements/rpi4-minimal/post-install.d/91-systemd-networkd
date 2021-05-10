@@ -7,7 +7,7 @@ set -eu
 set -o pipefail
 
 systemctl enable systemd-networkd
-cat << EOF > /etc/systemd/networkd/eth0.network
+cat << EOF > /etc/systemd/network/eth0.network
 [Match]
 Name=eth0
 
