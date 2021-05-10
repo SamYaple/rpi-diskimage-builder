@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# NOTE: This script should be modified as you see fit or just used as
+# reference to running the disk-image-create command with the rpi4 element
+
 set -eux
 
 # https://stackoverflow.com/a/246128
