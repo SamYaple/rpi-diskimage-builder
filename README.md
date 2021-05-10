@@ -34,29 +34,29 @@ usage can be found upstream and should supplement this readme.
 
 # Building with the rpi4 element
 
-    # (optional) http_proxy pointed to apt-cacher-ng server, this value does
-    #            not end up in the final image
+    # (optional) if you want to use an apt-cacher-ng server or similiar, set this value. The
+    # configuration this sets is only used during build and does not end up in the final image
     export http_proxy=http://192.168.0.254:3142
     
-    # (optional) $DIB_CREATE_USERNAME will be created and added to the sudo
-    #            group
+    # (optional) $DIB_CREATE_USERNAME will be created and added to the sudo group
     export DIB_CREATE_USERNAME=mgmt
 
-    # (optional) $DIB_ADD_AUTHORIZED_SSH_KEY is added to
-    #            /home/$DIB_CREATE_USERNAME/.ssh/authorized_keys
+    # (optional) $DIB_ADD_AUTHORIZED_SSH_KEY is added to /home/$DIB_CREATE_USERNAME/.ssh/authorized_keys
     export DIB_ADD_AUTHORIZED_SSH_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8/vEPvz4foBsFFi1i2mBrf8ZEpiYFtt7VjCLfwgO4R"
-    
+
+    # (optional) Some configuration changes to help harden the sshd ciphers and options
     export DIB_OPENSSH_SERVER_HARDENING=1
-    export DIB_DEBIAN_COMPONENTS=main,universe,multiverse,restricted
+
+    # The RELEASE and DEBIAN_COMPONENTS can be adjusted as needed. Refer to upstream documentation
     export DIB_RELEASE=hirsute
+    export DIB_DEBIAN_COMPONENTS=main,universe,multiverse,restricted
     
-    # This variable doesn't actually get installed, but instead prevents the
-    # normal kernel configuration in `ubuntu-minimal` from occuring
+    # This variable doesn't get installed, however it does prevent incorrect kernel installs from
+    # the `ubuntu-minimal` element
     export DIB_UBUNTU_KERNEL=linux-raspi
     
     # This should point to the local path of this cloned repository
     export ELEMENTS_PATH="~/rpi-diskimage-builder/elements"
     
-    # After the above envvars have been set, you can run disk-image-create as
-    # you normally would
+    # After the above envvars have been set, you can run disk-image-create as you normally would
     disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4
