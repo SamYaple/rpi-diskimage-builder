@@ -7,5 +7,5 @@ set -eu
 set -o pipefail
 
 for f in cmdline.txt config.txt; do
-    cp -av /tmp/in_target.d/${f} /boot/firmware/
+    cp -v /tmp/in_target.d/extra-data.d/${f} /boot/firmware/
 done

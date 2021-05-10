@@ -5,3 +5,4 @@ u-boot-tools:
 flash-kernel:
 device-tree-compiler:
 libubootenv-tool:
+ubuntu-raspi-settings:

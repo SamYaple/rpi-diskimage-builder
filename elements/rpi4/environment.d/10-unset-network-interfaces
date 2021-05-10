@@ -1,0 +1,2 @@
+# This is handled by the package ubuntu-raspi-settings
+export DIB_APT_MINIMAL_CREATE_INTERFACES=0
