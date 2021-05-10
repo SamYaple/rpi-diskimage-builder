@@ -6,10 +6,12 @@
     label: mbr
     partitions:
       - name: boot
-        flags: [ boot, primary ]
+        flags: [ primary, boot ]
         size: 256MiB
+        type: 0C # FAT32, LBA-mapped
         mkfs:
           type: vfat
+          opts: "-F 32" # force 32 bit
           mount:
             mount_point: /boot/firmware
             fstab:
