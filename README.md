@@ -5,6 +5,9 @@ Raspberry PI 4 image. Technically this element should work for the Raspberry PI
 3 as-is, but that is untested and out-of-scope. If you plan to use this for
 other versions than the RPi4, expect to do some modifications.
 
+At this time, this build will only work with the `hirsute` (21.04) and beyond
+releases of Ubuntu.
+
 # Prerequisites
 Clone the repo:
 
@@ -38,6 +41,7 @@ usage can be found upstream and should supplement this readme.
     # (optional) $DIB_CREATE_USERNAME will be created and added to the sudo
     #            group
     export DIB_CREATE_USERNAME=mgmt
+
     # (optional) $DIB_ADD_AUTHORIZED_SSH_KEY is added to
     #            /home/$DIB_CREATE_USERNAME/.ssh/authorized_keys
     export DIB_ADD_AUTHORIZED_SSH_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8/vEPvz4foBsFFi1i2mBrf8ZEpiYFtt7VjCLfwgO4R"
@@ -56,4 +60,3 @@ usage can be found upstream and should supplement this readme.
     # After the above envvars have been set, you can run disk-image-create as
     # you normally would
     disk-image-create -t raw -o ~/rpi4-hirsute.raw rpi4
-
