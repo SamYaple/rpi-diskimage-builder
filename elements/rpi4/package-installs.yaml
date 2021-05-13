@@ -1,5 +1,4 @@
-htop:
-iproute2:
 mosh:
 tmux:
 vim:
+openssh-server:

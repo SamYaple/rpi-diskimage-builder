@@ -9,9 +9,3 @@ u-boot-tools:
 flash-kernel:
 device-tree-compiler:
 libubootenv-tool:
-
-iproute2:
-tmux:
-htop:
-mosh:
-openssh-server:
